@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                JobScheduler jobScheduler = (JobScheduler)getSystemService(Context.JOB_SCHEDULER_SERVICE );
+                JobScheduler jobScheduler = (JobScheduler)getSystemService(JOB_SCHEDULER_SERVICE );
                 if (jobScheduler != null) {
                     jobScheduler.cancel(123);
                     Log.d(TAG, "onClick: job Stop");
